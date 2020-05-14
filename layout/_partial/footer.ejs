@@ -1,0 +1,9 @@
+<foot id="footer">
+  <p id="hitokoto">(*^ω^*)&nbsp;&nbsp;一言&nbsp;获取中...&nbsp;&nbsp;(｡>∀<｡)</p>
+  <script src="https://v1.hitokoto.cn/?encode=js&select=%23hitokoto" defer></script>
+  <hr class="boldline"/>
+  <p class="sites_info">
+    &copy <a href="/#"><%- theme.sitesinfo.author%></a> <% if(theme.sitesinfo.startYear < date(Date.now(), 'YYYY')){%> <%- theme.sitesinfo.startYear %> - <% } %> <%- date(Date.now(), 'YYYY') %> &nbsp Powered by <a href="https://hexo.io/">Hexo</a> &nbsp Themed by <a href="https://github.com/cooong"> Cong </a>
+  </p>
+  <br/>
+</foot>

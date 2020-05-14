@@ -1,0 +1,35 @@
+<head>
+  <title>
+    <% if(page.title){ %> <%- page.title %> | <% }
+    else if (is_category()){ %> <%- page.category %> | <% }
+    else if (is_tag()){ %> <%- page.tag %> | <% } %> <%- theme.website.title %>
+  </title>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+  <%- css('css/style') %>
+  <%- js('js/script.js') %>
+  
+  <% if (is_current('/categories')){ %> <%- js('js/cloud.js') %> <% }
+  else if (is_current('/tags')){ %> <%- js('js/cloud.js') %> <% } %>
+  
+  <% if (is_post()){ %>
+  
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.2/styles/dark.min.css">
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.2/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+  <%- js('js/copycode.js') %>
+  
+  <% if (theme.comment.select == "Gitalk") { %>
+  
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
+    <script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
+
+  <% } else if (theme.comment.select == "Valine") { %>
+  
+    <%- js('js/Valine.min.js') %>
+    
+  <% } %>
+  <% } %>
+  
+</head>

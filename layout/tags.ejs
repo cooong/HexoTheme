@@ -1,0 +1,10 @@
+<%- partial('_partial/logo') %>
+
+<div class="tags">
+ <div id="div1">
+  <% site.tags.forEach(function(tag){ %>
+    <a class="tgc_1" href="/tags/<%- tag.name %>"><%- tag.name %></a>
+  <% }) %>
+</div>  
+</div>
+<br/>

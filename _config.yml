@@ -1,0 +1,18 @@
+website:
+  title: Cong
+  index_title: Cong's Blog
+  favicon: /favicon.ico
+  logo: /images/pikachu.png
+  
+sitesinfo:
+  author: Cong
+  startYear: 2019
+
+comment:
+  select: Valine
+  
+contact:
+  github: cooong
+  githee: coong
+  email: congz0.0@qq.com
+  

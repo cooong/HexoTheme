@@ -1,0 +1,44 @@
+<% page.posts.forEach(function(post){ %>
+<div class=article_list>
+
+  <div class="title_date">
+    <div class="article_title">
+      <a class="title_link" href="/<%- post.path %>"> &nbsp &nbsp <%- post.title %></a><br/>
+    </div>
+  
+    <div class="article_date">
+      「 <%- full_date(post.date, " YYYY-MM-DD ") %> 」
+    </div>
+    
+  </div>
+  
+  <div class="article_excerpt">
+  <div class="excerpt">
+  <a class="excerpt_link" href="/<%- post.path %>">
+    <%- post.excerpt %>
+  </a>
+  </div>
+  </div>
+  
+  <div class="archive">
+  <div class="archive_box">
+  <% post.categories.forEach(function(category){ %>
+    <img class="svg" src="/images/category.svg"></img>
+    <a class="archive_link" href="/categories/<%- category.name %>">
+      <%- category.name %>
+    </a>
+  <% }) %>
+  </div>
+  
+  <div class="archive_box">
+    <% post.tags.forEach(function(tag){ %>
+    <img class="svg" src="/images/tag.svg"></img>
+    <a class="archive_link" href="/tags/<%- tag.name %>">
+      <%- tag.name %>
+    </a>
+  <% }) %>
+  </div>
+  </div>
+  
+</div>
+<% }) %>

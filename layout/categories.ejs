@@ -1,0 +1,10 @@
+<%- partial('_partial/logo') %>
+
+<div class="tags">
+  <% site.categories.forEach(function(category){ %>
+  <div class="singletag">
+    <a class="tag_link" href="/categories/<%- category.name %>"><%- category.name %></a>
+  </div>
+  <% }) %>
+</div>
+<br/>

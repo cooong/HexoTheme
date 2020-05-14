@@ -1,0 +1,9 @@
+<div class="index_logo" onclick="index()">
+  <img class="logo_img" src="<%- theme.website.logo%>"/>
+  <p id="index_title">
+  <% if (is_home()){ %> <%- theme.website.index_title %> <% }
+    else if (is_category()){ %> <%- page.category %> <% }
+    else if (is_tag()){ %> <%- page.tag %> <% }
+    else { %> <%- page.title %> <% } %>
+  </p>
+</div>
