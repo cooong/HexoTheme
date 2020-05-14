@@ -2,9 +2,12 @@
 
 ### 添加 | post | 代码高亮&代码复制
 代码高亮
+</br>
 [highlight.js](https://highlightjs.org/)
+</br>
 代码复制
-themes/cong/source/js/copycode.js
+</br>
+source/js/copycode.js
 
 ### 添加 | index | Excerpt
 Hexo插件、文章摘要
